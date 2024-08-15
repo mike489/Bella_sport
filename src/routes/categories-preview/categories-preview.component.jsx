@@ -1,25 +1,18 @@
-import { useContext, Fragment } from "react";
-
-import { CategoriesContext } from "../../contexts/categories.context";
+import React from "react";
 import CategoryPreview from "../../components/category-preview/category-preview.component";
-import Spinner from "../../components/spinner/spinner.component";
+// import Spinner from "../../components/spinner/spinner.component";
 
-const CategoriesPreview = () => {
-  const { categoriesMap, loading } = useContext(CategoriesContext);
-
+const CategoriesPreview = ({ categories }) => {
   return (
-    <Fragment>
-      {loading ? (
-        <Spinner />
-      ) : (
-        Object.keys(categoriesMap).map((title) => {
-          const products = categoriesMap[title];
-          return (
-            <CategoryPreview key={title} title={title} products={products} />
-          );
-        })
-      )}
-    </Fragment>
+    <React.Fragment>
+      {categories.map((category) => (
+        <CategoryPreview
+          key={category.title}
+          title={category.title}
+          products={category.items}
+        />
+      ))}
+    </React.Fragment>
   );
 };
 

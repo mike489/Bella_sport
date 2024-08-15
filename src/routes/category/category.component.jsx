@@ -1,38 +1,40 @@
-import { useContext, useState, useEffect, Fragment } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useContext, useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import ProductCard from "../../components/product-card/product-card.component";
+import Spinner from "../../components/spinner/spinner.component";
+import { CategoryContainer, Title } from "./category.styles";
 
-import ProductCard from '../../components/product-card/product-card.component';
-import Spinner from '../../components/spinner/spinner.component';
-
-import { CategoriesContext } from '../../contexts/categories.context';
-
-import { CategoryContainer, Title } from './category.styles';
-
-const Category = () => {
+const Category = ({ categories }) => {
   const { category } = useParams();
-  const { categoriesMap, loading } = useContext(CategoriesContext);
-  const [products, setProducts] = useState(categoriesMap[category]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    setProducts(categoriesMap[category]);
-  }, [category, categoriesMap]);
+    const selectedCategory = categories.find(
+      (cat) => cat.title.toLowerCase() === category.toLowerCase()
+    );
+    if (selectedCategory) {
+      setProducts(selectedCategory.items);
+    }
+  }, [category, categories]);
 
   return (
-    <Fragment>
-      {loading ? (
+    <React.Fragment>
+      {products.length === 0 ? (
         <Spinner />
       ) : (
-        <Fragment>
+        <React.Fragment>
           <Title>{category.toUpperCase()}</Title>
           <CategoryContainer>
-            {products &&
-              products.map((product) => (
+            {products.map(
+              (product) => (
                 <ProductCard key={product.id} product={product} />
-              ))}
+              ),
+              [category, products]
+            )}
           </CategoryContainer>
-        </Fragment>
+        </React.Fragment>
       )}
-    </Fragment>
+    </React.Fragment>
   );
 };
 

@@ -10,7 +10,7 @@ const categories = [
     id: 1,
     title: "Shrits",
     imageUrl: Full,
-    route: "shop/hats",
+    route: "shop/shrits",
   },
   {
     id: 2,
@@ -22,19 +22,19 @@ const categories = [
     id: 3,
     title: "Shoes",
     imageUrl: Shoe,
-    route: "shop/sneakers",
+    route: "shop/Shoes",
   },
   {
     id: 4,
-    title: "womens",
+    title: "Tracksuits",
     imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-    route: "shop/womens",
+    route: "shop/Tracksuits",
   },
   {
     id: 5,
     title: "Balls",
     imageUrl: Balls,
-    route: "shop/mens",
+    route: "shop/Balls",
   },
 ];
 
