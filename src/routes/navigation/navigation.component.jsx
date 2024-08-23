@@ -1,14 +1,14 @@
 import { Fragment, useContext } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropdown from "../../components/cart-dropdown/cart-dropdown.component";
 
-import { UserContext } from "../../contexts/user.context";
+
 import { CartContext } from "../../contexts/cart.context";
 
 import CrwnLogo from "../../assets/crown1.png";
-import { signOutUser } from "../../utils/firebase/firebase.utils";
+
 
 import {
   NavigationContainer,
@@ -29,9 +29,9 @@ const Navigation = () => {
         <NavLinks>
           <NavLink to="/shop">SHOP</NavLink>
 
-          <NavLink to="/auth">Contact Us</NavLink>
+          <NavLink to="/contact">Contact Us</NavLink>
 
-          <CartIcon />
+          {/* <CartIcon /> */}
         </NavLinks>
         {isCartOpen && <CartDropdown />}
       </NavigationContainer>
