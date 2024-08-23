@@ -1,5 +1,10 @@
-import shirt from "./assets/ts1.jpg";
-import shirt2 from "./assets/ts2.jpg";
+import shirt from "./assets/T-Shirt/ts1.jpg";
+import shirt2 from "./assets/T-Shirt/ts2.jpg";
+import AcMillan from "./assets/T-Shirt/Ac-Mill.jpg";
+import Manjacket from "./assets/Jacket/man-jaket.webp";
+import Aresnaljak from "./assets/Jacket/Aresnaljak.webp";
+import Brasilnew from "./assets/T-Shirt/Brazelnew.jpg";
+import Brasil from "./assets/T-Shirt/Brazilman.jpg";
 
 const SHOP_DATA = [
   {
@@ -19,8 +24,8 @@ const SHOP_DATA = [
       },
       {
         id: 3,
-        name: "Chelsea",
-        imageUrl: "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
+        name: "AC Millan",
+        imageUrl: AcMillan,
         price: 2500,
       },
       {
@@ -43,14 +48,14 @@ const SHOP_DATA = [
       },
       {
         id: 7,
-        name: "Barcelona",
-        imageUrl: "https://i.ibb.co/bLB646Z/red-beanie.png",
+        name: "Brasil Custom",
+        imageUrl: Brasilnew,
         price: 2500,
       },
       {
         id: 8,
-        name: "Real Madrid",
-        imageUrl: "https://i.ibb.co/1f2nWMM/wolf-cap.png",
+        name: "Brasil",
+        imageUrl: Brasil,
         price: 2500,
       },
       {
@@ -119,14 +124,14 @@ const SHOP_DATA = [
     items: [
       {
         id: 18,
-        name: "Real Madrid",
-        imageUrl: "https://i.ibb.co/XzcwL5s/black-shearling.png",
+        name: "Arsenal",
+        imageUrl: Aresnaljak,
         price: 125,
       },
       {
         id: 19,
         name: "Manchester United",
-        imageUrl: "https://i.ibb.co/mJS6vz0/blue-jean-jacket.png",
+        imageUrl: Manjacket,
         price: 90,
       },
       {
