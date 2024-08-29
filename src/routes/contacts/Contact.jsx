@@ -3,13 +3,13 @@ import emailjs from "@emailjs/browser";
 // import NavBar1 from "../Components/NavBar2";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Section, Form, BgCover, FontPrimary } from "./contact.styles.jsx";
+import { Section, Form, BgCover } from "./contact.styles.jsx";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [isSending, setIsSending] = useState(false);
+  const [isSending] = useState(false);
   const formRef = useRef(null);
 
   const handleSubmit = (e) => {
@@ -92,7 +92,7 @@ const Contact = () => {
                   value={name}
                   required
                   className="block w-full rounded-lg shadow-sm bg-gray-50 border border-gray-300 focus-ring-primary-500 focus:border-primary-500"
-                onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div>

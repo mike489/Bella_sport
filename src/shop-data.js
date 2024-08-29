@@ -5,6 +5,9 @@ import Manjacket from "./assets/Jacket/man-jaket.webp";
 import Aresnaljak from "./assets/Jacket/Aresnaljak.webp";
 import Brasilnew from "./assets/T-Shirt/Brazelnew.jpg";
 import Brasil from "./assets/T-Shirt/Brazilman.jpg";
+import TrakArR from "./assets/Tracksuits/manuinted-red.jpg";
+import TrackPuma from "./assets/Tracksuits/puma.jpg";
+import TrackCity from "./assets/Tracksuits/mancity.jpg"
 
 const SHOP_DATA = [
   {
@@ -159,14 +162,14 @@ const SHOP_DATA = [
     items: [
       {
         id: 23,
-        name: "Addis",
-        imageUrl: "https://i.ibb.co/7CQVJNm/blue-tank.png",
+        name: "Puma",
+        imageUrl: TrackPuma,
         price: 25,
       },
       {
         id: 24,
         name: "Manchester United",
-        imageUrl: "https://i.ibb.co/4W2DGKm/floral-blouse.png",
+        imageUrl: TrakArR,
         price: 20,
       },
       {
@@ -190,7 +193,7 @@ const SHOP_DATA = [
       {
         id: 28,
         name: "Manchester City",
-        imageUrl: "https://i.ibb.co/v1cvwNf/yellow-track-suit.png",
+        imageUrl: TrackCity,
         price: 135,
       },
       {
