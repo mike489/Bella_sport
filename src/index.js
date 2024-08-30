@@ -12,7 +12,7 @@ import { CartProvider } from "./contexts/cart.context";
 import "./index.scss";
 
 const client = new ApolloClient({
-  uri: "https://crwn-clothing.com/",
+  // uri: "https://crwn-clothing.com/",
   cache: new InMemoryCache(),
 });
 
